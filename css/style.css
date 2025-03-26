@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --light-text: #666;
+    --border-color: #eee;
+    --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --gradient-start: #3498db;
+    --gradient-end: #2ecc71;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --warning-color: #f39c12;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+.background-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo-icon {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+header .slogan {
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.timer-container {
+    display: inline-block;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.timer {
+    background-color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.timer-info {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 8px 8px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: var(--light-text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.message-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.message-form:hover {
+    transform: translateY(-5px);
+}
+
+.message-form h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.message-form h2 i {
+    margin-right: 8px;
+}
+
+.message-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.message-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-right: 15px;
+    transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-group i {
+    color: #aaa;
+    margin-right: 5px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px 5px;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+.message-form button {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-form button i {
+    margin-right: 8px;
+}
+
+.message-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.message-list {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.message-list h2 {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.message-list h2 i {
+    margin-right: 8px;
+}
+
+.message {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    transition: background-color 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message:hover {
+    background-color: #f9f9f9;
+}
+
+.message:last-child {
+    border-bottom: none;
+}
+
+.message-content {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.message-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.username {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.timestamp {
+    color: #999;
+}
+
+.empty-message {
+    padding: 40px 20px;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* 通知样式 */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification.success {
+    background-color: var(--success-color);
+}
+
+.notification.error {
+    background-color: var(--error-color);
+}
+
+.notification.warning {
+    background-color: var(--warning-color);
+}
+
+footer {
+    text-align: center;
+    padding-top: 30px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-footer {
+        flex-direction: column;
+    }
+    
+    .input-group {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .message-form button {
+        width: 100%;
+    }
+    
+    .timer {
+        font-size: 1.4rem;
+    }
+    
+    .notification {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+} 

@@ -1,0 +1,41 @@
+server:
+  port: 8999
+  servlet:
+    context-path: /
+    
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.217:3306/time_capsule?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  
+  # 静态资源配置
+  web:
+    resources:
+      static-locations: classpath:/static/
+      
+  # 开发工具配置
+  devtools:
+    restart:
+      enabled: true
+  
+# MyBatis Plus配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.timecapsule.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      
+# 应用特定配置
+time-capsule:
+  countdown:
+    hours: 24  # 倒计时小时数
+    check-interval: 60000  # 检查间隔(毫秒)
+  backup:
+    path: ./backup  # 数据备份路径 

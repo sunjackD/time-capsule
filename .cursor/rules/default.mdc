@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: cursor_rule
+globs:
+alwaysApply: true
+---
+
+# 时光留痕项目
+
+## 项目概述
+- 一个留言板应用，如果超过24小时没有新留言，所有历史记录将被自动删除
+- 技术栈: Java Spring Boot + MySQL + HTML/CSS/JavaScript
+
+## 核心功能
+- 留言板功能：用户可以发布、查看留言
+- 倒计时计时器：显示距离留言记录删除的剩余时间
+- 自动备份：在记录删除前自动备份数据
+
+## 接口说明
+- 留言相关: `/api/messages`（GET获取留言，POST提交留言）
+- 倒计时: `/api/countdown`（获取倒计时信息）
+
+## 注意事项
+- 界面设计以青春感为主题，包含背景效果和动画
+- 移动端适配已实现
