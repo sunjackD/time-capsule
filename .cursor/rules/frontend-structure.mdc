@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 时光留痕前端架构
+
+## 页面结构
+- 主页面: [index.html](mdc:index.html) - 包含留言板界面和倒计时显示
+
+## 样式
+- 主样式表: [css/style.css](mdc:css/style.css) - 青春主题风格，包含响应式设计
+
+## 脚本功能
+- 主脚本: [js/script.js](mdc:js/script.js) - 负责以下功能:
+  - 留言的获取和提交
+  - 倒计时的实时更新显示
+  - 动态背景效果
+  - 移动端适配
+
+## 交互规范
+- 使用AJAX与后端API交互
+- 页面加载时自动获取留言并更新倒计时
+- 提交新留言后即时刷新留言区和倒计时
+

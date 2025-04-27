@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 时光留痕项目结构
+
+## 后端结构 (Spring Boot)
+- 主入口: [src/main/java/com/timecapsule/TimeCapsuleApplication.java](mdc:src/main/java/com/timecapsule/TimeCapsuleApplication.java)
+- 配置文件: [src/main/resources/application.yml](mdc:src/main/resources/application.yml)
+
+## 前端结构
+- 主页面: [index.html](mdc:index.html)
+- 样式表: [css/style.css](mdc:css/style.css)
+- 脚本文件: [js/script.js](mdc:js/script.js)
+
+## 项目依赖
+- Maven配置: [pom.xml](mdc:pom.xml)
+

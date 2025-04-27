@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 时光留痕后端架构
+
+## MVC架构
+- **Controller层**: 处理HTTP请求，位于 `com.timecapsule.controller` 包下
+- **Service层**: 业务逻辑处理，位于 `com.timecapsule.service` 包下
+- **DTO**: 数据传输对象，位于 `com.timecapsule.dto` 包下
+- **Entity**: 数据库实体类，位于 `com.timecapsule.entity` 包下
+- **Mapper**: MyBatis映射接口，位于 `com.timecapsule.mapper` 包下
+
+## 定时任务
+- 自动删除过期留言和备份数据的定时任务位于 `com.timecapsule.task` 包下
+
+## API接口规范
+- 留言板接口: `/api/messages` (GET获取留言，POST提交新留言)
+- 倒计时接口: `/api/countdown` (获取距离记录删除的剩余时间)
+
