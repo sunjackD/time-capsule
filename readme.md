@@ -19,3 +19,5 @@
 4. **访问前端**：
    - 打开浏览器访问`http://localhost:8999`即可使用本应用
 
+![image](https://github.com/user-attachments/assets/3027f4a0-7398-4744-9963-dc6d040b7e80)
+
